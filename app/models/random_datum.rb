@@ -1,0 +1,2 @@
+class RandomDatum < ApplicationRecord
+end
