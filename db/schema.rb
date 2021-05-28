@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_28_185406) do
+ActiveRecord::Schema.define(version: 2021_05_28_201240) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "random_data", force: :cascade do |t|
     t.bigint "random_seed", default: -> { "floor(((random() * ('2147483648'::bigint)::double precision) + (1)::double precision))" }, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "uuid", default: -> { "gen_random_uuid()" }, null: false
   end
 
 end
