@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_05_28_185406) do
   enable_extension "plpgsql"
 
   create_table "random_data", force: :cascade do |t|
-    t.bigint "random_seed"
+    t.bigint "random_seed", default: -> { "floor(((random() * ('2147483648'::bigint)::double precision) + (1)::double precision))" }, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
