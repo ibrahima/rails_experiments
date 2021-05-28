@@ -9,7 +9,7 @@
 #
 
 one:
-  random_seed: 
+  random_seed: 123
 
 two:
-  random_seed: 
+  random_seed: 456
