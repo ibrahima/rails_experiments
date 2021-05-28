@@ -1,4 +1,12 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# == Schema Information
+#
+# Table name: random_data
+#
+#  id          :bigint           not null, primary key
+#  random_seed :bigint           not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
 
 one:
   random_seed: 

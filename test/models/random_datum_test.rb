@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: random_data
+#
+#  id          :bigint           not null, primary key
+#  random_seed :bigint           not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
 require "test_helper"
 
 class RandomDatumTest < ActiveSupport::TestCase
