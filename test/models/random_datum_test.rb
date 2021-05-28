@@ -14,4 +14,10 @@ class RandomDatumTest < ActiveSupport::TestCase
     rd = RandomDatum.create!
     assert rd.random_seed.present?
   end
+
+  test "creating a RandomDatum sets the random_seed field after reload" do
+    rd = RandomDatum.create!
+    rd.reload
+    assert rd.random_seed.present?
+  end
 end
