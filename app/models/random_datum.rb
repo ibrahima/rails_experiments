@@ -8,4 +8,5 @@
 #  updated_at  :datetime         not null
 #
 class RandomDatum < ApplicationRecord
+  returning :random_seed
 end
